@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <style>
-        /* Page fade-in effect */
         body {
-            background-color: #000000; /* Black background */
-            color: #ffffff; /* White text */
+            background-color: #000000; /* Black */
+            color: #ffffff; /* White */
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
@@ -16,7 +15,6 @@
             animation: fadeIn 1.5s ease-in forwards;
         }
 
-        /* Heading with glowing effect */
         h1 {
             color: #ffcc00; /* Yellow */
             font-size: 2.5em;
@@ -24,15 +22,6 @@
             animation: glow 1.5s infinite alternate;
         }
 
-        /* Paragraph */
-        p {
-            color: #d3d3d3;
-            font-size: 1.2em;
-            opacity: 0;
-            animation: fadeIn 2s ease-in forwards 0.5s;
-        }
-
-        /* Button container */
         .button-container {
             margin-top: 20px;
             display: flex;
@@ -41,7 +30,6 @@
             gap: 15px;
         }
 
-        /* Button styling */
         .btn {
             display: inline-block;
             background: #ffcc00; /* Yellow */
@@ -56,39 +44,22 @@
             animation: fadeIn 2s ease-in forwards 1s;
         }
 
-        /* Button hover effect */
         .btn:hover {
             background: #ffd700; /* Golden yellow */
             transform: scale(1.1);
             box-shadow: 0 0 15px #ffcc00;
         }
 
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Glow animation */
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-            }
-            to {
-                text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
-            }
-        }
     </style>
 </head>
 <body>
     <h1>Hello, this is Medhalakshmi!</h1>
     <p>Welcome to my Website!</p>
 
-    <!-- Four Custom Buttons -->
     <div class="button-container">
         <a href="#" class="btn">Resources</a>
         <a href="#" class="btn">My Codes</a>
-        <a href="#" class="btn">Contact Me</a>
+        <a href="contact.html" class="btn">Contact Me</a>  <!-- Opens contact page -->
         <a href="#" class="btn">Explore More</a>
     </div>
 </body>
