@@ -1,0 +1,49 @@
+/* Global Styles */
+body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+/* Container for content */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Heading */
+h1 {
+    color: #ffcc00; /* Yellow text */
+    font-size: 2.5em;
+}
+
+/* Paragraph */
+p {
+    color: #d3d3d3; /* Light gray */
+    font-size: 1.2em;
+}
+
+/* Stylish Button */
+.btn {
+    display: inline-block;
+    background: #ff6600;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ff3300;
+    transform: scale(1.1);
+}
