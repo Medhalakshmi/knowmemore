@@ -6,50 +6,54 @@
     <title>Resources</title>
     <style>
         body {
-            background-color: #000000; /* Black */
+            background-color: #000000; /* Black background */
             color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
         }
-
         h1 {
-            color: #FFCC00; /* Yellow */
+            color: #FFCC00; /* Yellow heading */
         }
-
         .section {
             margin: 30px 0;
         }
-
-        .drive-link {
-            display: block;
-            color: #FFD700; /* Golden Yellow */
+        .btn {
+            display: inline-block;
+            background: #FFCC00; /* Yellow */
+            color: #000000; /* Black text */
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: 1.2em;
-            margin: 10px 0;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
         }
-
-        .drive-link:hover {
-            text-decoration: underline;
+        .btn:hover {
+            background: #FFD700; /* Golden Yellow */
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #FFCC00;
         }
     </style>
 </head>
 <body>
     <h1>Resources</h1>
-
+    
     <div class="section">
         <h2>Probability</h2>
-        <a href="YOUR_DRIVE_LINK_HERE" class="drive-link">Probability Resources</a>
+        <a href="https://drive.google.com/your-probability-link" class="btn" target="_blank">View Resources</a>
     </div>
-
+    
     <div class="section">
         <h2>Bayesian Statistics</h2>
-        <a href="YOUR_DRIVE_LINK_HERE" class="drive-link">Bayesian Statistics Resources</a>
+        <a href="https://drive.google.com/your-bayesian-link" class="btn" target="_blank">View Resources</a>
     </div>
-
+    
     <div class="section">
         <h2>Computing</h2>
-        <a href="YOUR_DRIVE_LINK_HERE" class="drive-link">Computing Resources</a>
+        <a href="https://drive.google.com/your-computing-link" class="btn" target="_blank">View Resources</a>
     </div>
+    
+    <a href="index.html" class="btn">Back to Home</a>
 </body>
 </html>
