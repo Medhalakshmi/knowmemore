@@ -32,6 +32,15 @@
             animation: fadeIn 2s ease-in forwards 0.5s;
         }
 
+        /* Button container */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
         /* Button styling */
         .btn {
             display: inline-block;
@@ -42,7 +51,6 @@
             font-size: 1.2em;
             font-weight: bold;
             border-radius: 5px;
-            margin-top: 20px;
             transition: 0.3s ease-in-out;
             opacity: 0;
             animation: fadeIn 2s ease-in forwards 1s;
@@ -75,6 +83,13 @@
 <body>
     <h1>Hello, this is Medhalakshmi!</h1>
     <p>Welcome to my Website!</p>
-    <a href="#" class="btn">Explore More</a>
+
+    <!-- Four Custom Buttons -->
+    <div class="button-container">
+        <a href="#" class="btn">Resources</a>
+        <a href="#" class="btn">My Codes</a>
+        <a href="#" class="btn">Contact Me</a>
+        <a href="#" class="btn">Explore More</a>
+    </div>
 </body>
 </html>
