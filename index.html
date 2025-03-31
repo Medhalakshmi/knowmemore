@@ -5,20 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <style>
+        /* Set up full-screen background */
         body {
-            background-color: #1a1a1a; /* Dark Gray */
-            color: #ffffff; /* White */
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
-            opacity: 1;
-            animation: fadeIn 1.5s ease-in forwards;
+            color: #ffffff; /* White text */
         }
 
+        /* Background container */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.jpeg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        /* Black overlay with opacity */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Black overlay with 70% opacity */
+        }
+
+        /* Content container */
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 50px;
+        }
+
+        /* Light purple heading */
         h1 {
-            color: #ffcc00; /* Yellow */
+            color: #D8BFD8; /* Light Purple */
             font-size: 2.5em;
-            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            text-shadow: 0 0 10px #D8BFD8, 0 0 20px #D8BFD8;
         }
 
         .button-container {
@@ -29,10 +57,11 @@
             gap: 15px;
         }
 
+        /* Light purple buttons */
         .btn {
             display: inline-block;
-            background: #ffcc00; /* Yellow */
-            color: #000000; /* Black */
+            background: #D8BFD8; /* Light Purple */
+            color: #000000; /* Black text */
             padding: 12px 24px;
             text-decoration: none;
             font-size: 1.2em;
@@ -42,22 +71,28 @@
         }
 
         .btn:hover {
-            background: #ffd700; /* Golden Yellow */
+            background: #E6CFE6; /* Lighter Purple */
             transform: scale(1.1);
-            box-shadow: 0 0 15px #ffcc00;
+            box-shadow: 0 0 15px #D8BFD8;
         }
-
     </style>
 </head>
 <body>
-    <h1>Hello, this is Medhalakshmi!</h1>
-    <p>Welcome to my Website!</p>
+    <!-- Background and Overlay -->
+    <div class="background-container"></div>
+    <div class="overlay"></div>
 
-    <div class="button-container">
-        <a href="#" class="btn">Resources</a>
-        <a href="about.html" class="btn">About Me</a>
-        <a href="contact.html" class="btn">Contact Me</a>
-        <a href="#" class="btn">Explore More</a>
+    <!-- Content -->
+    <div class="content">
+        <h1>Hello, this is Medhalakshmi!</h1>
+        <p>Welcome to my Website!</p>
+
+        <div class="button-container">
+            <a href="#" class="btn">Resources</a>
+            <a href="about.html" class="btn">About Me</a>
+            <a href="contact.html" class="btn">Contact Me</a>
+            <a href="#" class="btn">Explore More</a>
+        </div>
     </div>
 </body>
 </html>
