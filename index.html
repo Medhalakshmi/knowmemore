@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <style>
-        /* Full-screen background */
+        /* Set up full-screen background */
         body, html {
             margin: 0;
             padding: 0;
@@ -16,11 +16,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            position: relative;
         }
 
-        /* Background image */
+        /* Background container */
         .background-container {
             position: fixed;
             top: 0;
@@ -29,17 +27,17 @@
             height: 100%;
             background: url('background.jpg') no-repeat center center fixed; 
             background-size: cover;
-            filter: brightness(50%);
+            filter: brightness(50%); /* Reduce brightness for lower opacity effect */
         }
 
-        /* Black overlay for transparency effect */
+        /* Black overlay with opacity */
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.5); /* Adjust this for transparency */
         }
 
         /* Centered content */
@@ -50,55 +48,50 @@
             max-width: 600px;
         }
 
-        /* Heading style */
+        /* Yellow heading (Glow Removed) */
         h1 {
             color: #FFCC00; /* Yellow */
             font-size: 2.5em;
             margin-bottom: 10px;
         }
 
-        /* Text styling */
         p {
             font-size: 1.2em;
-            line-height: 1.5;
             margin-bottom: 20px;
         }
 
-        /* Buttons in extreme corners */
-        .contact-btn, .explore-btn {
-            position: fixed;
-            top: 10px;
-            padding: 10px 20px;
-            background: #FFCC00;
-            color: #000;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .contact-btn {
-            left: 10px; /* Stick to extreme top-left */
-        }
-
-        .explore-btn {
-            right: 10px; /* Stick to extreme top-right */
-        }
-
-        /* Center buttons container */
-        .center-buttons {
-            margin-top: 20px;
+        .button-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
         }
 
-        /* Yellow button style */
+        .top-buttons {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Yellow buttons */
         .btn {
             display: inline-block;
-            background: #FFCC00;
-            color: #000000;
+            background: #FFCC00; /* Yellow */
+            color: #000000; /* Black text */
             padding: 12px 24px;
             text-decoration: none;
             font-size: 1.2em;
@@ -108,7 +101,7 @@
         }
 
         .btn:hover {
-            background: #FFD700;
+            background: #FFD700; /* Golden Yellow */
             transform: scale(1.1);
             box-shadow: 0 0 15px #FFCC00;
         }
@@ -119,29 +112,24 @@
     <div class="background-container"></div>
     <div class="overlay"></div>
 
-    <!-- Buttons at the extreme top corners -->
-    <a href="contact.html" class="contact-btn">Contact Me</a> <!-- Extreme top-left -->
-    <a href="#" class="explore-btn">Explore More</a> <!-- Extreme top-right -->
+    <!-- Top Buttons -->
+    <div class="top-buttons">
+        <div class="top-left">
+            <a href="contact.html" class="btn">Contact Me</a>
+        </div>
+        <div class="top-right">
+            <a href="#" class="btn">Explore More</a>
+        </div>
+    </div>
 
     <!-- Centered Content -->
     <div class="content">
         <h1>Hello, Welcome!</h1>
-        <p>
-            This is <b>Medhalakshmi Acharya</b>.  
-            I'm currently a final-year statistics graduate student at <b>Presidency University, Kolkata, India</b>  
-            and a prospective doctoral student at <b>Purdue University, IN.</b>
-        </p>
+        <p>This is Medhalakshmi Acharya. I'm currently a final-year statistics graduate student at Presidency University, Kolkata, India and a prospective doctoral student at Purdue University, IN </p>
+        <p>I am into a lot of things like probability, combinatorics, a little bit of graphs and networks, soccer and cooking. My dad says that cooking is an art. With a perfect blend of spices, one can create magic. I believe that statistics works in the same way. With a balanced blend of available tools, one can create magic. </p>
 
-        <p>
-            I am into a lot of things like <b>probability, combinatorics, graphs and networks, soccer, and cooking.</b>  
-            My dad says that <i>cooking is an art</i>. With a perfect blend of spices, one can create magic.  
-            I believe that <b>statistics works the same way.</b>  
-            With a balanced blend of available tools, one can create magic.
-        </p>
-
-        <!-- Buttons in the center -->
-        <div class="center-buttons">
-            <a href="#" class="btn">Resources</a>
+        <div class="button-container">
+            <a href="resources.html" class="btn">Resources</a>
             <a href="about.html" class="btn">About Me</a>
         </div>
     </div>
