@@ -6,12 +6,16 @@
     <title>Welcome to My Website</title>
     <style>
         /* Set up full-screen background */
-        body {
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
             text-align: center;
             color: #ffffff; /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Background container */
@@ -23,6 +27,7 @@
             height: 100%;
             background: url('background.jpg') no-repeat center center fixed; 
             background-size: cover;
+            filter: brightness(50%); /* Reduce brightness for lower opacity effect */
         }
 
         /* Black overlay with opacity */
@@ -32,35 +37,40 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Black overlay with 70% opacity */
+            background: rgba(0, 0, 0, 0.5); /* Adjust this for transparency */
         }
 
-        /* Content container */
+        /* Centered content */
         .content {
             position: relative;
             z-index: 2;
-            padding: 50px;
+            padding: 30px;
+            max-width: 600px;
         }
 
-        /* Light purple heading */
+        /* Yellow heading (Glow Removed) */
         h1 {
-            color: #D8BFD8; /* Light Purple */
+            color: #FFCC00; /* Yellow */
             font-size: 2.5em;
-            text-shadow: 0 0 10px #D8BFD8, 0 0 20px #D8BFD8;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
         .button-container {
-            margin-top: 20px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
         }
 
-        /* Light purple buttons */
+        /* Yellow buttons */
         .btn {
             display: inline-block;
-            background: #D8BFD8; /* Light Purple */
+            background: #FFCC00; /* Yellow */
             color: #000000; /* Black text */
             padding: 12px 24px;
             text-decoration: none;
@@ -71,9 +81,9 @@
         }
 
         .btn:hover {
-            background: #E6CFE6; /* Lighter Purple */
+            background: #FFD700; /* Golden Yellow */
             transform: scale(1.1);
-            box-shadow: 0 0 15px #D8BFD8;
+            box-shadow: 0 0 15px #FFCC00;
         }
     </style>
 </head>
@@ -82,7 +92,7 @@
     <div class="background-container"></div>
     <div class="overlay"></div>
 
-    <!-- Content -->
+    <!-- Centered Content -->
     <div class="content">
         <h1>Hello, this is Medhalakshmi!</h1>
         <p>Welcome to my Website!</p>
