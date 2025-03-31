@@ -3,68 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Resources</title>
     <style>
-        /* Set up full-screen background */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        body {
+            background-color: #000000; /* Black */
+            color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
             text-align: center;
-            color: #ffffff; /* White text */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 50px;
         }
 
-        /* Background container */
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('background.jpg') no-repeat center center fixed; 
-            background-size: cover;
-            filter: brightness(50%); /* Reduce brightness for lower opacity effect */
-        }
-
-        /* Black overlay with opacity */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Adjust this for transparency */
-        }
-
-        /* Centered content */
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 30px;
-            max-width: 600px;
-        }
-
-        /* Yellow heading */
         h1 {
             color: #FFCC00; /* Yellow */
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
         }
 
         .top-buttons {
@@ -73,26 +23,14 @@
             display: flex;
             justify-content: space-between;
             padding: 20px;
+            top: 0;
+            left: 0;
         }
 
-        .top-left {
-            position: absolute;
-            top: 10px;
-            left: 20px;
-        }
-
-        .top-right {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        /* Yellow buttons */
         .btn {
-            display: inline-block;
-            background: #FFCC00; /* Yellow */
-            color: #000000; /* Black text */
-            padding: 12px 24px;
+            background: #FFCC00;
+            color: #000000;
+            padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2em;
             font-weight: bold;
@@ -101,37 +39,49 @@
         }
 
         .btn:hover {
-            background: #FFD700; /* Golden Yellow */
+            background: #FFD700;
             transform: scale(1.1);
             box-shadow: 0 0 15px #FFCC00;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .drive-link {
+            display: block;
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .drive-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <!-- Background and Overlay -->
-    <div class="background-container"></div>
-    <div class="overlay"></div>
-
-    <!-- Top Buttons -->
     <div class="top-buttons">
-        <div class="top-left">
-            <a href="contact.html" class="btn">Contact Me</a>
-        </div>
-        <div class="top-right">
-            <a href="#" class="btn">Explore More</a>
-        </div>
+        <a href="contact.html" class="btn">Contact Me</a>
+        <a href="explore.html" class="btn">Explore More</a>
+    </div>
+    
+    <h1>Resources</h1>
+
+    <div class="section">
+        <h2>Probability</h2>
+        <a href="YOUR_DRIVE_LINK_HERE" class="drive-link">Probability Resources</a>
     </div>
 
-    <!-- Centered Content -->
-    <div class="content">
-        <h1>Hello, Welcome!</h1>
-        <p>This is Medhalakshmi Acharya. I'm currently a final-year statistics graduate student at Presidency University, Kolkata, India and a prospective doctoral student at Purdue University, IN </p>
-        <p>I am into a lot of things like probability, combinatorics, a little bit of graphs and networks, soccer and cooking. My dad says that cooking is an art. With a perfect blend of spices, one can create magic. I believe that statistics works in the same way. With a balanced blend of available tools, one can create magic. </p>
+    <div class="section">
+        <h2>Bayesian Statistics</h2>
+        <a href="YOUR_DRIVE_LINK_HERE" class="drive-link">Bayesian Statistics Resources</a>
+    </div>
 
-        <div class="button-container">
-            <a href="resources.html" class="btn">Resources</a>
-            <a href="about.html" class="btn">About Me</a>
-        </div>
+    <div class="section">
+        <h2>Computing</h2>
+        <a href="YOUR_DRIVE_LINK_HERE" class="drive-link">Computing Resources</a>
     </div>
 </body>
 </html>
