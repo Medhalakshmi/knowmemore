@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <style>
-        /* Set up full-screen background */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
             text-align: center;
-            color: #ffffff; /* White text */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: #ffffff;
         }
 
-        /* Background container */
         .background-container {
             position: fixed;
             top: 0;
@@ -28,9 +23,9 @@
             background: url('background.jpg') no-repeat center center fixed; 
             background-size: cover;
             filter: brightness(50%);
+            z-index: -1;
         }
 
-        /* Black overlay with opacity */
         .overlay {
             position: fixed;
             top: 0;
@@ -38,17 +33,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
-        }
-
-        /* Top buttons positioning */
-        .top-buttons {
-            position: absolute;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            top: 0;
-            left: 0;
+            z-index: -1;
         }
 
         .top-left {
@@ -64,38 +49,38 @@
         }
 
         .btn {
-            background: #FFCC00; /* Yellow */
-            color: #000000; /* Black text */
-            padding: 8px 16px; /* Reduced size */
+            background: #FFCC00;
+            color: #000000;
+            padding: 8px 16px;
             text-decoration: none;
-            font-size: 1em; /* Smaller text */
+            font-size: 1em;
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s ease-in-out;
         }
 
         .btn:hover {
-            background: #FFD700; /* Golden Yellow */
+            background: #FFD700;
             transform: scale(1.1);
             box-shadow: 0 0 15px #FFCC00;
         }
 
-        /* Centered content */
         .content {
             position: relative;
             z-index: 2;
             padding: 30px;
             max-width: 800px;
+            margin: auto;
         }
 
         h1 {
-            color: #FFCC00; /* Yellow */
-            font-size: 2.2em; /* Adjusted size */
+            color: #FFCC00;
+            font-size: 2.2em;
             margin-bottom: 15px;
         }
 
         p {
-            font-size: 1.2em; /* Adjusted size */
+            font-size: 1.2em;
             margin-bottom: 20px;
         }
 
@@ -106,84 +91,114 @@
             gap: 15px;
             margin-top: 30px;
         }
+
+        .articles-container {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .articles-container h2 {
+            color: #FFCC00;
+            font-size: 1.8em;
+        }
+
+        .articles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .article {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .gallery-container {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-container h2 {
+            color: #FFCC00;
+            font-size: 1.8em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
-    <!-- Background and Overlay -->
     <div class="background-container"></div>
     <div class="overlay"></div>
 
-    <!-- Top Buttons -->
-<a href="contact.html" class="btn top-left">Contact Me</a>
-<a href="explore.html" class="btn top-right">Explore More</a>
+    <a href="contact.html" class="btn top-left">Contact Me</a>
+    <a href="explore.html" class="btn top-right">Explore More</a>
 
-<!-- Centered Content -->
-<div class="content">
-    <h1>Hello, Welcome!</h1>
-    <p>
-        This is <b>Medhalakshmi Acharya</b>.  
-        I'm currently a final-year statistics graduate student at <b>Presidency University, Kolkata, India</b>  
-        and a prospective doctoral student at <b>Purdue University, IN.</b>
-    </p>
+    <div class="content">
+        <h1>Hello, Welcome!</h1>
+        <p>
+            This is <b>Medhalakshmi Acharya</b>.  
+            I'm currently a final-year statistics graduate student at <b>Presidency University, Kolkata, India</b>  
+            and a prospective doctoral student at <b>Purdue University, IN.</b>
+        </p>
 
-    <p>
-        I am into a lot of things like <b>probability, combinatorics, a little bit of graphs and networks, soccer, and cooking.</b>  
-        My dad says that <i>cooking is an art</i>. With a perfect blend of spices, one can create magic.  
-        I believe that <b>statistics works the same way.</b>  
-        With a balanced blend of available tools, one can create magic.
-    </p>
+        <p>
+            I am into a lot of things like <b>probability, combinatorics, a little bit of graphs and networks, soccer, and cooking.</b>  
+            My dad says that <i>cooking is an art</i>. With a perfect blend of spices, one can create magic.  
+            I believe that <b>statistics works the same way.</b>  
+            With a balanced blend of available tools, one can create magic.
+        </p>
 
-    <!-- Fixed Center Buttons -->
-    <div class="button-container">
-        <a href="./resources.html" class="btn">Resources</a>
-        <a href="about.html" class="btn">About Me</a>
+        <div class="button-container">
+            <a href="resources.html" class="btn">Resources</a>
+            <a href="about.html" class="btn">About Me</a>
+        </div>
     </div>
-     <!-- Picture Gallery Section -->
-<div class="gallery-container">
-    <h2>Picture Gallery</h2>
-    <div class="gallery">
-        <img src="images/pic1.jpg" alt="Image 1">
-        <img src="images/pic2.jpg" alt="Image 2">
-        <img src="images/pic3.jpg" alt="Image 3">
-        <img src="images/pic4.jpg" alt="Image 4">
-        <img src="images/pic5.jpg" alt="Image 5">
-        <img src="images/pic6.jpg" alt="Image 6">
+
+    <div class="articles-container">
+        <h2>News and Articles</h2>
+        <div class="articles">
+            <div class="article">Article 1</div>
+            <div class="article">Article 2</div>
+            <div class="article">Article 3</div>
+        </div>
     </div>
-</div>
 
-<style>
-    /* Gallery Section */
-    .gallery-container {
-        margin-top: 30px;
-        text-align: center;
-    }
-
-    .gallery-container h2 {
-        color: #FFCC00;
-        font-size: 1.8em;
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-        justify-items: center;
-        padding: 20px;
-    }
-
-    .gallery img {
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .gallery img:hover {
-        transform: scale(1.1);
-    }
-</style>
-
-</div>
-   
+    <div class="gallery-container">
+        <h2>Picture Gallery</h2>
+        <div class="gallery">
+            <img src="images/pic1.jpg" alt="Image 1">
+            <img src="images/pic2.jpg" alt="Image 2">
+            <img src="images/pic3.jpg" alt="Image 3">
+            <img src="images/pic4.jpg" alt="Image 4">
+            <img src="images/pic5.jpg" alt="Image 5">
+            <img src="images/pic6.jpg" alt="Image 6">
+        </div>
+    </div>
+</body>
+</html>
