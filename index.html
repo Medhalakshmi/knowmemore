@@ -67,11 +67,21 @@
         /* Top buttons container */
         .top-buttons {
             position: absolute;
-            top: 20px;
+            top: 10px;
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
+        }
+
+        /* Extreme corner positioning */
+        .contact-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Extreme top-left */
+        }
+
+        .explore-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Extreme top-right */
         }
 
         /* Center buttons container */
@@ -107,10 +117,10 @@
     <div class="background-container"></div>
     <div class="overlay"></div>
 
-    <!-- Buttons at the top -->
+    <!-- Buttons at the extreme top corners -->
     <div class="top-buttons">
-        <a href="contact.html" class="btn">Contact Me</a> <!-- Left side -->
-        <a href="#" class="btn">Explore More</a> <!-- Right side -->
+        <a href="contact.html" class="btn contact-btn">Contact Me</a> <!-- Extreme top-left -->
+        <a href="#" class="btn explore-btn">Explore More</a> <!-- Extreme top-right -->
     </div>
 
     <!-- Centered Content -->
@@ -126,7 +136,7 @@
             I am into a lot of things like <b>probability, combinatorics, graphs and networks, soccer, and cooking.</b>  
             My dad says that <i>cooking is an art</i>. With a perfect blend of spices, one can create magic.  
             I believe that <b>statistics works the same way.</b>  
-            With a balanced blend of available tools, one can create magic!
+            With a balanced blend of available tools, one can create magic.
         </p>
 
         <!-- Buttons in the center -->
