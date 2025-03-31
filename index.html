@@ -16,6 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         /* Background container */
@@ -48,22 +49,34 @@
             max-width: 600px;
         }
 
-        /* Yellow heading (Glow Removed) */
+        /* Yellow heading */
         h1 {
             color: #FFCC00; /* Yellow */
             font-size: 2.5em;
             margin-bottom: 10px;
         }
 
+        /* Styling for paragraphs */
         p {
             font-size: 1.2em;
+            line-height: 1.5;
             margin-bottom: 20px;
         }
 
-        .button-container {
+        /* Container for buttons at the top */
+        .top-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Container for center buttons */
+        .center-buttons {
+            margin-top: 20px;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 15px;
         }
 
@@ -92,18 +105,32 @@
     <div class="background-container"></div>
     <div class="overlay"></div>
 
+    <!-- Buttons at the top -->
+    <div class="top-buttons">
+        <a href="contact.html" class="btn">Contact Me</a>
+        <a href="#" class="btn">Explore More</a>
+    </div>
+
     <!-- Centered Content -->
     <div class="content">
         <h1>Hello, Welcome!</h1>
-        <p>This is Medhalakshmi Acharya. I'm currently a final-year statistics graduate student at Presidency University, Kolkata, India and a prospective doctoral student at Purdue University, IN </p>
-<p> I am into a lot of things like probability, combinatorics, a little bit of graphs and networks, soccer and cooking. My dad says that cooking is an art. With a perfect blend of spices, one can create magic. I believe that statistics works in the same way. With a balanced blend of available tools, one can create magic. </p>
-        <p>  </p>
+        <p>
+            This is <b>Medhalakshmi Acharya</b>.  
+            I'm currently a final-year statistics graduate student at <b>Presidency University, Kolkata, India</b>  
+            and a prospective doctoral student at <b>Purdue University, IN.</b>
+        </p>
 
-        <div class="button-container">
+        <p>
+            I am into a lot of things like <b>probability, combinatorics, a little bit of graphs and networks, soccer, and cooking.</b>  
+            My dad says that <i>cooking is an art</i>. With a perfect blend of spices, one can create magic.  
+            I believe that <b>statistics works the same way.</b>  
+            With a balanced blend of available tools, one can create magic.
+        </p>
+
+        <!-- Buttons in the center -->
+        <div class="center-buttons">
             <a href="#" class="btn">Resources</a>
             <a href="about.html" class="btn">About Me</a>
-            <a href="contact.html" class="btn">Contact Me</a>
-            <a href="#" class="btn">Explore More</a>
         </div>
     </div>
 </body>
