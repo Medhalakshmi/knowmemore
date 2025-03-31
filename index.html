@@ -5,24 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <style>
+        /* Page fade-in effect */
         body {
             background-color: #000000; /* Black background */
-            color: #ffffff; /* White text color */
+            color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
         }
+
+        /* Heading with glowing effect */
         h1 {
-            color: #ffcc00; /* Yellow color */
+            color: #ffcc00; /* Yellow */
             font-size: 2.5em;
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            animation: glow 1.5s infinite alternate;
         }
+
+        /* Paragraph */
         p {
-            color: #d3d3d3; /* Light gray */
+            color: #d3d3d3;
             font-size: 1.2em;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 0.5s;
         }
+
+        /* Button styling */
         .btn {
             display: inline-block;
-            background: #ffcc00; /* Yellow button */
+            background: #ffcc00; /* Yellow */
             color: #000000; /* Black text */
             padding: 12px 24px;
             text-decoration: none;
@@ -31,10 +44,31 @@
             border-radius: 5px;
             margin-top: 20px;
             transition: 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1s;
         }
+
+        /* Button hover effect */
         .btn:hover {
             background: #ffd700; /* Golden yellow */
             transform: scale(1.1);
+            box-shadow: 0 0 15px #ffcc00;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Glow animation */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            }
+            to {
+                text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
+            }
         }
     </style>
 </head>
